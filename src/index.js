@@ -81,7 +81,6 @@ app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
   const { amount } = request.body;
   const { customer } = request;
 
-  console.log(customer)
   const balance = getBalance(customer.statement)
 
   if(balance < amount) {
